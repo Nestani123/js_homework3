@@ -1,6 +1,7 @@
 const cellsAll = document.querySelectorAll(".cell");
 let firstPlayer = "X";
 let move = 0;
+let winnerPerson = document.querySelector(".result");
 const winningPositions =[
     [0,1,2],
     [3,4,5],
@@ -30,17 +31,20 @@ cellsAll[i].addEventListener('click', ()=>{
 
 const checkWinner = ()=>{
     if(move===cellsAll.length){
-        console.log("It's a draw");
+        winnerPerson.textContent = "It's a draw!";
+        //console.log("It's a draw");
     }
      for(let i=0;i<winningPositions.length;i++){
         if(cellsAll[winningPositions[i][0]].textContent===firstPlayer && cellsAll[winningPositions[i][1]].textContent===firstPlayer && cellsAll[winningPositions[i][2]].textContent === firstPlayer){
-            console.log("winner is "+firstPlayer);
+            winnerPerson.textContent = "winner is "+firstPlayer;
+            //console.log("winner is "+firstPlayer);
             resetGame();
         }
      }
-}
-const resetGame =()=>{
-    for(let i=0;i<cellsAll.length;i++){
-        cellsAll[i].textContent="";
+};
+const resetGame = () =>{
+    move = 0;
+    for(let i=0; i < cellsAll.length; i++){
+        cellsAll[i].textContent = "";
         }
 };

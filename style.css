@@ -4,20 +4,34 @@
     padding: 0;
     box-sizing: border-box;
 }
-.game{
-
+h1{
+    color: white;
+    text-align: center;
+    margin-top: 5%;
+}
+.result{
+        color: white;
+        text-align: center;
+        margin-top: 10px;
+}
+.gameApp{
     display: flex;
-    width: 150px;
+    justify-content: center;
+    margin-top: 8%;
+}
+.game{
+    display: flex;
+    width: 240px;
     flex-wrap: wrap;
 }
 .cell{
     display: flex;
-    width: 50px;
-    height: 50px;
-    border: 1px solid white;
+    width: 80px;
+    height: 8cqh;
+    border: 2px solid white;
     font-weight: bold;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
+    font-size: 50px;
     color: white;
 }
